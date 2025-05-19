@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4CCE4BF62DDBB6A80060C44D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCE4BF52DDBB6A80060C44D /* WidgetKit.framework */; };
 		4CCE4BF82DDBB6A80060C44D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCE4BF72DDBB6A80060C44D /* SwiftUI.framework */; };
-		4CCE4C032DDBB6AD0060C44D /* LiveActivityExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4CCE4BF32DDBB6A80060C44D /* LiveActivityExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4CCE4C032DDBB6AD0060C44D /* LiveActivityExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4CCE4BF32DDBB6A80060C44D /* LiveActivityExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +29,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				4CCE4C032DDBB6AD0060C44D /* LiveActivityExtensionExtension.appex in Embed Foundation Extensions */,
+				4CCE4C032DDBB6AD0060C44D /* LiveActivityExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		4CCE4BD72DDBB5B10060C44D /* LiveActivityTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveActivityTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CCE4BF32DDBB6A80060C44D /* LiveActivityExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LiveActivityExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CCE4BF32DDBB6A80060C44D /* LiveActivityExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LiveActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CCE4BF52DDBB6A80060C44D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		4CCE4BF72DDBB6A80060C44D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -51,12 +51,19 @@
 			);
 			target = 4CCE4BD62DDBB5B10060C44D /* LiveActivityTests */;
 		};
-		4CCE4C072DDBB6AD0060C44D /* Exceptions for "LiveActivityExtension" folder in "LiveActivityExtensionExtension" target */ = {
+		4CCE4C072DDBB6AD0060C44D /* Exceptions for "LiveActivityExtension" folder in "LiveActivityExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 4CCE4BF22DDBB6A80060C44D /* LiveActivityExtensionExtension */;
+			target = 4CCE4BF22DDBB6A80060C44D /* LiveActivityExtension */;
+		};
+		4CCE4C0C2DDBB7430060C44D /* Exceptions for "LiveActivityTests" folder in "LiveActivityExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ActivityModel.swift,
+			);
+			target = 4CCE4BF22DDBB6A80060C44D /* LiveActivityExtension */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -65,6 +72,7 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				4CCE4BE92DDBB5B20060C44D /* Exceptions for "LiveActivityTests" folder in "LiveActivityTests" target */,
+				4CCE4C0C2DDBB7430060C44D /* Exceptions for "LiveActivityTests" folder in "LiveActivityExtension" target */,
 			);
 			path = LiveActivityTests;
 			sourceTree = "<group>";
@@ -72,7 +80,7 @@
 		4CCE4BF92DDBB6A80060C44D /* LiveActivityExtension */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				4CCE4C072DDBB6AD0060C44D /* Exceptions for "LiveActivityExtension" folder in "LiveActivityExtensionExtension" target */,
+				4CCE4C072DDBB6AD0060C44D /* Exceptions for "LiveActivityExtension" folder in "LiveActivityExtension" target */,
 			);
 			path = LiveActivityExtension;
 			sourceTree = "<group>";
@@ -113,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				4CCE4BD72DDBB5B10060C44D /* LiveActivityTests.app */,
-				4CCE4BF32DDBB6A80060C44D /* LiveActivityExtensionExtension.appex */,
+				4CCE4BF32DDBB6A80060C44D /* LiveActivityExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,9 +162,9 @@
 			productReference = 4CCE4BD72DDBB5B10060C44D /* LiveActivityTests.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4CCE4BF22DDBB6A80060C44D /* LiveActivityExtensionExtension */ = {
+		4CCE4BF22DDBB6A80060C44D /* LiveActivityExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4CCE4C042DDBB6AD0060C44D /* Build configuration list for PBXNativeTarget "LiveActivityExtensionExtension" */;
+			buildConfigurationList = 4CCE4C042DDBB6AD0060C44D /* Build configuration list for PBXNativeTarget "LiveActivityExtension" */;
 			buildPhases = (
 				4CCE4BEF2DDBB6A80060C44D /* Sources */,
 				4CCE4BF02DDBB6A80060C44D /* Frameworks */,
@@ -169,11 +177,11 @@
 			fileSystemSynchronizedGroups = (
 				4CCE4BF92DDBB6A80060C44D /* LiveActivityExtension */,
 			);
-			name = LiveActivityExtensionExtension;
+			name = LiveActivityExtension;
 			packageProductDependencies = (
 			);
 			productName = LiveActivityExtensionExtension;
-			productReference = 4CCE4BF32DDBB6A80060C44D /* LiveActivityExtensionExtension.appex */;
+			productReference = 4CCE4BF32DDBB6A80060C44D /* LiveActivityExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -209,7 +217,7 @@
 			projectRoot = "";
 			targets = (
 				4CCE4BD62DDBB5B10060C44D /* LiveActivityTests */,
-				4CCE4BF22DDBB6A80060C44D /* LiveActivityExtensionExtension */,
+				4CCE4BF22DDBB6A80060C44D /* LiveActivityExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -251,7 +259,7 @@
 /* Begin PBXTargetDependency section */
 		4CCE4C022DDBB6AD0060C44D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4CCE4BF22DDBB6A80060C44D /* LiveActivityExtensionExtension */;
+			target = 4CCE4BF22DDBB6A80060C44D /* LiveActivityExtension */;
 			targetProxy = 4CCE4C012DDBB6AD0060C44D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -509,7 +517,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4CCE4C042DDBB6AD0060C44D /* Build configuration list for PBXNativeTarget "LiveActivityExtensionExtension" */ = {
+		4CCE4C042DDBB6AD0060C44D /* Build configuration list for PBXNativeTarget "LiveActivityExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4CCE4C052DDBB6AD0060C44D /* Debug */,
