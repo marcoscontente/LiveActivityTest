@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ActivityKit
 
 class ViewController: UIViewController {
 
@@ -31,7 +32,7 @@ class ViewController: UIViewController {
     }
 
     @objc func startLiveActivity() {
-
+        initLiveActivity()
     }
 
     func initLiveActivity() {
@@ -39,10 +40,14 @@ class ViewController: UIViewController {
         let liveActivityData = ActivityModel(text: "Hello", image: "gear", timeLeft: 1000)
 
         do {
-
+            let activity = try Activity<ActivityModel>.request(
+                attributes: liveActivityData,
+                contentState: initialData,
+                pushType: nil
+            )
+            print("Success to starts live activity: \(activity.id)")
         } catch {
-
+            print("Failure to starts live activity: \(error)")
         }
-
     }
 }

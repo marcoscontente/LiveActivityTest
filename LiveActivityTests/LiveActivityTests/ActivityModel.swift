@@ -9,7 +9,6 @@ import ActivityKit
 
 struct ActivityModel: ActivityAttributes {
     struct ContentState: Codable, Hashable {
-
     }
 
     var text: String
